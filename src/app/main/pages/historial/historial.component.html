@@ -1,0 +1,50 @@
+<div>
+    <h3>Historial de Transacciones</h3>
+    <hr/>
+    <div>
+        <h3>Enviadas: </h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>N°</th>
+                    <th>Emisor: </th>
+                    <th>Receptor: </th>
+                    <th>Monto(S/.)</th>
+                    <th>Fecha: </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let transaccion of transaccionEmisorFiltrada; let i=index">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ transaccion.sender?.username }}</td>
+                    <td>{{ transaccion.receiver?.username }}</td>
+                    <td>{{ transaccion.amount | number : '0.2-2'}}</td>
+                    <td>{{ transaccion.dateCreated | date }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h3>Recibidas: </h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>N°</th>
+                    <th>Receptor: </th>
+                    <th>Emisor: </th>
+                    <th>Monto(S/.)</th>
+                    <th>Fecha: </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let transaccion of transaccionReceptorFiltrada; let i=index">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ transaccion.receiver?.username}}</td>
+                    <td>{{ transaccion.sender?.username }}</td>
+                    <td>{{ transaccion.amount | number : '0.2-2'}}</td>
+                    <td>{{ transaccion.dateCreated | date }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

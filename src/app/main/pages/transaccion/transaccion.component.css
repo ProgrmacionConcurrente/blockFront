@@ -1,0 +1,47 @@
+h3 {
+    color: black;
+    font-family: 'Crete Round', serif;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+p {
+  font-weight: bold;
+}
+
+.form-transaccion .field {
+    width: 250px;
+    border: 3px solid #2EB1E2;
+    border-radius: 10px;
+    display: block;
+    margin-top: 15px;
+}
+
+.form-transaccion mat-form-field {
+    width: inherit;
+    padding: 0 10px;
+  }
+
+.form-transaccion mat-label {
+    color: black;
+  }
+  
+.form-transaccion mat-input {
+    color: #000;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.form-transaccion button {
+    margin-top: 12px;
+    font-size: 20px;
+    font-family: 'Patua One', cursive;
+    border: 2px solid #AD9832;
+    border-radius: 8px;
+    background-color: #D1B838;
+    color: black;
+}

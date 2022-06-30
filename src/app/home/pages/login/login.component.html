@@ -1,0 +1,32 @@
+<div class="contenedor">
+    <form (ngSubmit)="iniciar()" class="form-login" autocomplete="off" #miFormulario="ngForm">
+        <h2>TRANSACTION APP</h2>
+        <h3>Iniciar Sesión</h3>
+        <!-- Campo correo -->
+        <div class="field">
+            <mat-form-field>
+                <mat-label>Username</mat-label>
+                <input ngModel matInput type="email" name="username" [(ngModel)]="initForm.username"/>
+            </mat-form-field>
+        </div>
+        <!-- Campo contraseña -->
+        <div class="field">
+            <mat-form-field>
+                <mat-label>Contraseña</mat-label>
+                <input ngModel matInput name="contra" [(ngModel)]="initForm.contra" [type]="hide ? 'password' : 'text'"/>
+                <button type="button" mat-icon-button matSuffix (click)="hide = !hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+        <div>
+            <span *ngIf="showMessage" class="alert">Correo o contraseña inválidos</span>
+        </div>
+        <div>
+            <button mat-button class="button" color="primary" type="submit">Iniciar sesión</button>
+        </div>
+        <div>
+            <button mat-button class="button" type="button" color="primary" (click)="registrarme()">Registrarme</button>
+        </div>
+    </form>
+</div>

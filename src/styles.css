@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+html, body { height: 100%;}
+
+/* Fondo y Tamaño */
+.fondo {
+  background-image: url('https://img.freepik.com/foto-gratis/verde-pastel-liso-fondo-producto-madera-beige_53876-102458.jpg?t=st=1656489430~exp=1656490030~hmac=5200c9bc536fa76d9fec8354b5565da01288e117723ab6a2e5bc526f7aab4ff9&w=996');
+  background-repeat: no-repeat;
+  background-size: 200%;
+}

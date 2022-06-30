@@ -1,0 +1,29 @@
+<div>
+    <h3>Transacción</h3>
+    <hr/>
+    <div>
+        <h4>Monto Actual: {{ valor }}</h4>    
+    </div>
+    <form class="form-transaccion" (ngSubmit)="registrar()" autocomplete="off" [formGroup]="miFormulario">
+        <!-- Campo "Para" -->
+        <div class="field">
+            <mat-form-field>
+                <mat-label>Receptor: </mat-label>
+                <input matInput formControlName="receptor" type="text"/>
+            </mat-form-field>
+        </div>
+        <!-- Campo "Para" -->
+        <div class="field">
+            <mat-form-field>
+                <mat-label>Monto: </mat-label>
+                <input matInput formControlName="monto" type="number"/>
+            </mat-form-field>
+        </div>
+        <div class="space">
+            <span *ngIf="showMessage" class="alert">Faltan campos requeridos (*)</span>
+        </div>
+        <button type="submit">
+            Registrar Transacción
+        </button>
+    </form>
+</div>

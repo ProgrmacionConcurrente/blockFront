@@ -1,0 +1,38 @@
+<div class="contenedor ">
+    <form (ngSubmit)="registrar()" autocomplete="off" class="form-registro" [formGroup]="miFormulario">
+        <h2>Transaction APP</h2>
+        <h3>Registro</h3>
+        <div>
+            <!-- Campo Nombre -->
+            <div class="field">
+                <mat-form-field>
+                    <mat-label>Username</mat-label>
+                    <input formControlName="username" matInput type="text" required>
+                </mat-form-field>
+            </div>
+            <!-- Campo Contraseña -->
+            <div class="field">
+                <mat-form-field>
+                    <mat-label>Contraseña</mat-label>
+                    <input  formControlName="password" matInput type="text" required [type]="hide ? 'password' : 'text'">
+                    <button type="button" mat-icon-button matSuffix (click)="hide = !hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+            </div>
+            <!-- Amount -->
+            <div class="field">
+                <mat-form-field>
+                    <mat-label>Monto</mat-label>
+                    <input formControlName="monto" matInput type="number" required>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="space">
+            <span *ngIf="showMessage" class="alert">Faltan campos requeridos (*)</span>
+        </div>
+        <div>
+            <button mat-button class="button" type="submit" color="primary">Registrarme</button>
+        </div>
+    </form>
+</div>

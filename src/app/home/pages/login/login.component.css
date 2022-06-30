@@ -1,0 +1,74 @@
+.form-login {
+    width: 550px;
+    height: 420px;
+    background: #fff;
+    margin: auto;
+    box-shadow: 1px 1px 12px #000;
+    padding: 20px 30px;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.form-login .field {
+    width: 250px;
+    border: 2px solid #7FE2A5;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.form-login h2 {
+    color: black;
+    font-family: 'Patua One', cursive;
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+.form-login h3 {
+    font-size: 20px;
+    padding: 3px;
+  }
+  
+::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: black !important;
+} 
+  
+::ng-deep.mat-form-field-ripple {
+   /*change color of underline when focused*/
+   background-color: black !important;;
+}
+
+.form-login mat-form-field {
+  width: inherit;
+  padding: 0 10px;
+}
+
+.form-login mat-label {
+  color: black;
+}
+
+.form-login mat-input {
+  color: #000;
+}
+
+span {
+  color: red;
+  font-weight: bold;
+  padding: 0;
+}
+
+.form-login .button {
+  margin-top: 12px;
+  font-size: 20px;
+  font-family: 'Patua One', cursive;
+  border: 2px solid #459B66;
+  border-radius: 8px;
+  background-color: #44C173;
+  color: black;
+}

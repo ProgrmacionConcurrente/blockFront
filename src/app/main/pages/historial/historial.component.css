@@ -1,0 +1,22 @@
+table {
+    width: 100%;
+    background-color: #F7E5C5;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+}
+
+thead {
+    background-color: #A2BDAC;
+    border-bottom: 5px solid #8BA293;
+    color: black
+}
+
+h3 {
+    color: black;
+    font-family: 'Crete Round', serif;
+    font-size: 45px;
+    font-weight: bold;
+}
